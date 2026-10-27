@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#151b27"><meta name="description" content="إنجاز — مهامك الفردية ومنافساتك الودية، بنقاط واضحة وتقدم حقيقي"><title>إنجاز | يومك بخطواتك</title><link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<main class="wrap">
+  <header class="brand"><div class="brand-symbol"><span>✓</span></div><div><div class="brand-name">إنجاز<span class="gold-dot">.</span></div><div class="brand-sub">مساحتك الخاصة لكل خطوة</div></div><div class="local-badge" id="modeBadge"><span></span> اختاري مساحتك</div></header>
+  <section id="setup" class="setup-card">
+    <div class="setup-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="big-check">✓</div><span class="spark spark-a">✦</span><span class="spark spark-b">✧</span></div>
+    <div class="setup-copy">
+      <div class="kicker">يوم جديد، فرصة جديدة</div><h1>خلّينا نرتّب<br><span>يومك على راحتك.</span></h1><p>اختاري مساحتك، وخلي كل إنجاز محسوب. تقدري تديري مهامك لحالك أو تتنافسي مع صديقاتك.</p>
+      <div id="landingChoices" class="landing-choices">
+        <button type="button" class="choice-card" id="choosePersonal"><span class="choice-icon">✦</span><span class="choice-copy"><strong>مهامي الفردية</strong><small>خطتي اليومية، سجل أسبوعي وأهدافي الطويلة</small></span><span class="choice-arrow">←</span></button>
+        <button type="button" class="choice-card" id="chooseIndividualCompetition"><span class="choice-icon">♛</span><span class="choice-copy"><strong>منافسة فردية</strong><small>كل مشاركة تجمع نقاطها وتتقدم بجهدها</small></span><span class="choice-arrow">←</span></button>
+        <button type="button" class="choice-card" id="chooseTeamCompetition"><span class="choice-icon">♟</span><span class="choice-copy"><strong>منافسة جماعية بالفرق</strong><small>كوّني فريقًا وتعاوني على صدارة الفرق</small></span><span class="choice-arrow">←</span></button>
+      </div>
+      <div id="individualSetup" class="hidden setup-subview">
+        <button class="back-choice" type="button" data-back-choice>← رجوع للاختيارات</button>
+        <form id="startForm"><label class="field-label" for="personName">إيش اسمك؟</label><input id="personName" maxlength="35" placeholder="اكتبي اسمك هنا" autocomplete="given-name" required>
+        <div class="tasks-label"><span class="field-label">أهم مهامك اليوم</span><span class="optional">تقدري تضيفي الباقي لاحقًا</span></div>
+        <div class="starter-task"><span class="order">01</span><input id="firstTask" maxlength="120" placeholder="المهمة الأهم" required><span class="priority-mark">★</span></div>
+        <div class="starter-task"><span class="order">02</span><input id="secondTask" maxlength="120" placeholder="المهمة الثانية (اختياري)"></div>
+        <div class="starter-task"><span class="order">03</span><input id="thirdTask" maxlength="120" placeholder="المهمة الثالثة (اختياري)"></div>
+        <button class="primary-btn start-btn" type="submit">ابدئي يومك <span>←</span></button><div class="privacy-line">⌁ بياناتك الفردية محفوظة في هذا المتصفح فقط</div></form>
+      </div>
+      <div id="competitionSetup" class="hidden setup-subview">
+        <button class="back-choice" type="button" data-back-choice>← رجوع للاختيارات</button>
+        <div class="competition-type-banner"><span id="selectedCompetitionIcon">♛</span><div><strong id="selectedCompetitionTitle">منافسة فردية</strong><small id="selectedCompetitionDesc">كل مشاركة تُقيّم مهامها وتجمع نقاطها بنفسها.</small></div></div>
+        <label class="field-label" for="compName">اسمك في المنافسة</label><input id="compName" maxlength="35" placeholder="مثال: خولة" autocomplete="nickname">
+        <div id="teamNamesBlock" class="setup-extra hidden"><label class="field-label" for="teamNames">أسماء الفرق</label><textarea id="teamNames" rows="2" maxlength="500" placeholder="الفريق الأول، الفريق الثاني، الفريق الثالث"></textarea><small>اكتبي اسمَي فريقين أو أكثر، وافصلي بينها بفاصلة أو سطر جديد.</small><label class="field-label" for="createTeamChoice">اختاري فريقك</label><select id="createTeamChoice"></select></div>
+        <div class="comp-actions"><button id="createCompetition" class="primary-btn" type="button">إنشاء المنافسة والحصول على الرمز</button></div>
+        <div class="join-divider"><span>أو انضمي لمنافسة موجودة</span></div>
+        <div class="join-box"><input id="joinCode" maxlength="8" placeholder="أدخلي رمز المنافسة" aria-label="رمز المنافسة" autocomplete="off"><button id="checkRoomBtn" class="ghost-btn" type="button">تحققي من الرمز</button></div>
+        <div id="joinTeamWrap" class="setup-extra hidden"><label class="field-label" for="joinTeamChoice">اختاري الفريق</label><select id="joinTeamChoice"></select></div>
+        <button id="joinCompetition" class="primary-btn join-confirm hidden" type="button">انضمام إلى المنافسة</button>
+        <p class="privacy-line">المنافسة الفردية: كل شخص ينافس بمفرده. المنافسة الجماعية: النقاط تتجمع لكل فريق. عدد المشاركين مرن، وكل مشاركة تدير مهامها فقط.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="dashboard" class="dashboard hidden">
+    <div class="welcome-row"><div><div class="kicker" id="todayLabel">خطوة بخطوة</div><h1 id="hello">أهلًا بكِ ✨</h1><p>اختاري القسم اللي تشتغلي عليه؛ مهامك الفردية مستقلة عن المنافسة.</p></div><button id="resetDay" class="ghost-btn" type="button" title="بدء قائمة جديدة">＋ <span>قائمة جديدة</span></button></div>
+    <nav class="app-nav" aria-label="التنقل"><button class="nav-btn active" data-view="todayView">مهامي الفردية</button><button class="nav-btn" data-view="historyView">سجل الأيام</button><button class="nav-btn" data-view="goalsView">أهدافي الطويلة</button><button class="nav-btn hidden" id="competitionNav" data-view="competitionView">المنافسة</button><button class="nav-btn" id="newCompetitionNav" type="button">＋ منافسة جديدة</button></nav>
+    <div id="todayView" class="view-panel">
+      <div class="hero-strip"><div class="hero-icon">✦</div><div class="hero-message"><strong id="encourageTitle">ابدئي بأهم مهمة</strong><p id="encourageText">مش لازم يكون يومك مثالي، يكفي إنك تتقدمي.</p></div><div class="daily-progress"><div class="ring" id="progressRing"><span id="progressPercent">0%</span></div><small>إنجاز اليوم</small></div></div>
+      <div class="stats-row"><article class="stat"><div class="stat-icon gold">✧</div><div><span>مهام اليوم</span><strong id="totalCount">0</strong></div></article><article class="stat"><div class="stat-icon green">✓</div><div><span>تم إنجازها</span><strong id="doneCount">0</strong></div></article><article class="stat"><div class="stat-icon blue">◷</div><div><span>وقت الإنجاز</span><strong id="timeCount">0 <small>د</small></strong></div></article></div>
+      <section class="tasks-card"><div class="section-head"><div><div class="kicker">خطتك اليوم</div><h2>مهام اليوم <span id="taskDate"></span></h2></div><div class="task-total" id="taskTotalLabel">0 مهام</div></div><div id="taskList" class="task-list"></div><form id="addForm" class="add-form"><span class="plus">＋</span><input id="newTask" maxlength="120" placeholder="أضيفي مهمة أخرى..." aria-label="مهمة جديدة"><button type="submit">إضافة مهمة</button></form><div id="emptyDone" class="all-done hidden"><span>✓</span><div><strong>يا سلام عليكِ!</strong><p>أنهيتِ كل مهام اليوم. تستحقي لحظة راحة.</p></div></div></section>
+    </div>
+    <section id="historyView" class="view-panel hidden archive-panel"><div class="section-head"><div><div class="kicker">سبعة أيام من التقدم</div><h2>سجل الأسبوع</h2></div><span class="task-total">كل يوم محفوظ</span></div><div id="historyDays" class="history-days"></div></section>
+    <section id="goalsView" class="view-panel hidden goals-panel"><div class="section-head"><div><div class="kicker">خطوة صغيرة كل يوم</div><h2>أهدافي على المدى الطويل</h2></div></div><form id="goalForm" class="goal-form"><label>اسم الهدف<input id="goalTitle" maxlength="120" placeholder="مثال: إنهاء دورة بايثون" required></label><label>المدة<select id="goalDuration"><option value="7">أسبوع</option><option value="14">أسبوعان</option><option value="30" selected>شهر</option><option value="60">شهران</option><option value="90">3 أشهر</option></select></label><button class="primary-btn" type="submit">＋ إضافة هدف</button></form><div id="goalList" class="goal-list"></div></section>
+    <section id="competitionView" class="view-panel hidden">
+      <div class="section-head"><div><div class="kicker" id="competitionKindKicker">منافسة ودّية</div><h2 id="competitionPageTitle">لوحة المنافسة</h2><p class="muted-note" id="competitionDayLabel">مهام اليوم</p></div></div>
+      <div class="room-code-card"><div><small>رمز المنافسة — شاركيه مع من تريدين دعوتها</small><strong id="roomCodeLabel">------</strong><small id="roomTypeLabel">منافسة فردية</small></div><button id="copyRoomCode" class="primary-btn" type="button">نسخ الرمز</button></div>
+      <div id="competitionInsight" class="competition-insight"></div>
+      <div class="competition-section-title"><h3>الترتيب والإحصائيات</h3><p>النقاط محسوبة من أهمية المهمة وصعوبتها، ونسبة الإنجاز موزونة حسب قيمة المهام.</p></div><div id="competitionStandings" class="competition-standings"></div>
+      <div class="competition-section-title"><h3>مهام المشاركات</h3><p>كل مشاركة تضيف مهامها وتعدلها وتحدد إنجازها بنفسها. بقية المشاركات يشاهدن التقدم فقط.</p></div><div id="competitionTasks" class="competition-tasks"></div>
+      <div class="competition-section-title"><h3>الأهداف طويلة الأمد</h3><p>أهداف تمتد لأسبوع أو شهر أو أكثر، ويظهر تقدمها للغرفة.</p></div><div id="competitionGoals" class="competition-goals"></div>
+      <div class="competition-section-title"><h3>إدارة المشاركات</h3><p>يمكن لصاحبة المنافسة إزالة مشاركة، وكل مشاركة تستطيع تعديل اسمها.</p></div><div id="participantManagement" class="participant-management"></div>
+      <div id="competitionHistory" class="competition-history"></div><div class="comp-footer"><button id="leaveCompetition" class="ghost-btn" type="button">الخروج من عرض المنافسة</button></div><div class="privacy-line">التحديث تلقائي كل بضع ثوانٍ. لا تضيفي معلومات حساسة.</div>
+    </section>
+    <footer><span>إنجاز <b>·</b> يومك بخطواتك</span><button id="editName" type="button">تعديل الاسم</button><span class="saved-label">● يُحفظ تلقائيًا</span></footer>
+  </section>
+  <div id="toast" class="toast hidden" role="status"><span class="toast-check">✓</span><span id="toastText">تم الإنجاز!</span></div>
+</main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="app.js"></script>
+</body></html>
