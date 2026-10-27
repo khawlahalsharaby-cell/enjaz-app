@@ -10,37 +10,37 @@
 #### 🔹 الشاشة الأولى (r1): اختيار نمط التنافس
 * **الوصف:** شاشة البداية لتحديد مسار التحدي، سواء كان تحدياً فردياً لمتابعة الأهداف الشخصية، أو إنشاء غرفة تحدٍ جماعية وتحديد المشتركين.
 <p align="center">
-  <img src="./kkk/r1.png" alt="Screen r1 - Game Mode Selection" width="70%" />
+  <img src="./kkkk/r1.png" alt="Screen r1 - Game Mode Selection" width="70%" />
 </p>
 
 #### 🔹 الشاشة الثانية (r2): إعداد التحدي وإدارة المشتركين
 * **الوصف:** واجهة مرنة تتيح بدء المنافسة بين شخصين (مثل: خولة ونادين) مع سهولة دعوة وإضافة متنافس ثالث ورابع لمشاركة التحدي عبر كود الغرفة.
 <p align="center">
-  <img src="/kkk/r2.png" alt="Screen r2 - Challenge Setup" width="70%" />
+  <img src="./kkkk/r2.png" alt="Screen r2 - Challenge Setup" width="70%" />
 </p>
 
 #### 🔹 الشاشة الثالثة (r3): تسجيل المهام وتحديد قوتها
 * **الوصف:** نظام تقييم ذكي يحدد وزن وصعوبة كل مهمة (بسيطة، متوسطة، قوية) لاحتساب نقاط عادلة تتناسب مع حجم الجهد الفعلي المبذول.
 <p align="center">
-  <img src="./kkk/r3.png" alt="Screen r3 - Task Weighting" width="70%" />
+  <img src="./kkkk/r3.png" alt="Screen r3 - Task Weighting" width="70%" />
 </p>
 
 #### 🔹 الشاشة الرابعة (r4): المقارنة التفاعلية والتحفيز الذكي
 * **الوصف:** محرك تشجيعي يحلل مهام المشتركين ويعرض رسائل تحفيزية حماسية لدفع الطرف الأقل إنجازاً لزيادة وتيرة مهامه واللحاق بالصدارة.
 <p align="center">
-  <img src="./kkk/r4.png" alt="Screen r4 - Motivational Engine" width="70%" />
+  <img src="./kkkk/r4.png" alt="Screen r4 - Motivational Engine" width="70%" />
 </p>
 
 #### 🔹 الشاشة الخامسة (r5): متابعة الإنجاز والنسب اللحظية
 * **الوصف:** شاشات متابعة ومؤشرات حية متزامنة لحظياً عبر **Supabase Realtime**، تعرض نسبة تقدم كل طرف في نفس اللحظة دون الحاجة لتحديث الصفحة.
 <p align="center">
-  <img src="./kkk/r5.png" alt="Screen r5 - Real-time Progress" width="70%" />
+  <img src="./kkkk/r5.png" alt="Screen r5 - Real-time Progress" width="70%" />
 </p>
 
 #### 🔹 الشاشة السادسة (r6): لوحة الصدارة والنتائج الختامية
 * **الوصف:** لوحة شرف تفاعلية تُبرز المتصدر النهائي، ومجموع النقاط المكتسبة، مع إحصائيات دقيقة لمعدل سرعة وجودة إنجاز المهام لكل متسابق.
 <p align="center">
-  <img src="./kkk/r6.png" alt="Screen r6 - Leaderboard & Analytics" width="70%" />
+  <img src="./kkkk/r6.png" alt="Screen r6 - Leaderboard & Analytics" width="70%" />
 </p>
 
 ### 🛠️ التقنيات الأساسية (Tech Stack)
